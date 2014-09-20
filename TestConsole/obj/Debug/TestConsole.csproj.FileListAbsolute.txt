@@ -1,0 +1,8 @@
+E:\temp\www_jiaxiaoweb_com\TestConsole\bin\Debug\TestConsole.exe.config
+E:\temp\www_jiaxiaoweb_com\TestConsole\bin\Debug\TestConsole.exe
+E:\temp\www_jiaxiaoweb_com\TestConsole\bin\Debug\TestConsole.pdb
+E:\temp\www_jiaxiaoweb_com\TestConsole\bin\Debug\Jiaxiaoweb.Data.dll
+E:\temp\www_jiaxiaoweb_com\TestConsole\bin\Debug\Jiaxiaoweb.Data.pdb
+E:\temp\www_jiaxiaoweb_com\TestConsole\obj\Debug\ResolveAssemblyReference.cache
+E:\temp\www_jiaxiaoweb_com\TestConsole\obj\Debug\TestConsole.exe
+E:\temp\www_jiaxiaoweb_com\TestConsole\obj\Debug\TestConsole.pdb

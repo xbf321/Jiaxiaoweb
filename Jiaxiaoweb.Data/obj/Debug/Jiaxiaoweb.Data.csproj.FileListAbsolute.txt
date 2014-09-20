@@ -1,0 +1,10 @@
+D:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\bin\Debug\Jiaxiaoweb.Data.dll
+D:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\bin\Debug\Jiaxiaoweb.Data.pdb
+D:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\obj\Debug\Jiaxiaoweb.Data.dll
+D:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\obj\Debug\Jiaxiaoweb.Data.pdb
+E:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\bin\Debug\Jiaxiaoweb.Data.dll
+E:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\bin\Debug\Jiaxiaoweb.Data.pdb
+E:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\obj\Debug\ResolveAssemblyReference.cache
+E:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\obj\Debug\Jiaxiaoweb.Data.dll
+E:\temp\www_jiaxiaoweb_com\Jiaxiaoweb.Data\obj\Debug\Jiaxiaoweb.Data.pdb

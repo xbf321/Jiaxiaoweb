@@ -1,0 +1,220 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+
+    <script src="/script/jquery-1.2.6.min.js" type="text/javascript"></script>
+
+    <script src="/script/jquery.hotkeys.js" type="text/javascript"></script>
+
+    <script src="/script/exam_common.js?v=2" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function cateShow(index) {
+            document.getElementById("cate_content_block_" + index).style.display = 'block';
+            document.getElementById("cate_item_" + index).className = 'cate_item_hover';
+        }
+        function cateHidden(index) {
+            document.getElementById("cate_content_block_" + index).style.display = 'none';
+            document.getElementById("cate_item_" + index).className = '';
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="head">
+            <ul>
+                <li>
+                    <img src="http://www.cnblogs.com/images/logo_small.gif" /></li>
+                <%if (Request.IsAuthenticated)
+                  {%>
+                  <li class="r">您好，<%=HttpContext.Current.User.Identity.Name %>![<a href="javascript:logout();" class="aa">退出</a>]</li>
+                <%}
+                  else
+                  { %>
+                <li class="r"><a href="javascript:login();" class="aa">用户登录</a> <a href="javascript:register();"
+                    class="aa">&nbsp; 注册</a></li>
+                <%} %>
+            </ul>
+        </div>
+        <div id="nav_wrapper">
+            <div id="nav_block">
+                <ul>
+                    <li class="on"><a href="/">首页</a></li>
+                    <li class="on"><a href="/zjlx.aspx">章节练习</a></li>
+                    <li class="on"><a href="/sxlx.aspx">顺序练习</a></li>
+                    <li class="on"><a href="/sjlx.aspx">随机练习</a></li>
+                    <li class="on"><a href="/mnks.aspx">模拟考试</a></li>
+                    <li class="on"><a href="/qhlx.aspx">强化练习</a></li>
+                    <li class="on"><a href="/errorlibrary.aspx">我的错题集</a></li>
+                </ul>
+            </div>
+            <div id="nav_block_right">
+            </div>
+            <div class="clear;">
+            </div>
+        </div>
+        <div id="main_wrapper">
+            <div id="side_nav">
+                <div id="cate_title_block">
+                    <div id="cate_title_title">
+                        <h2 id="cate_title">
+                            题库选择</h2>
+                    </div>
+                    <ul id="cate_item">
+                        <li id="cate_item_1" onmouseover="cateShow(1)" onmouseout="cateHidden(1)"><a href="###"
+                            class="cate_link" title="章节练习">章节练习</a></li>
+                        <li id="cate_item_2" onmouseover="cateShow(2)" onmouseout="cateHidden(2)"><a href="###"
+                            class="cate_link" title="顺序练习">顺序练习</a></li>
+                        <li id="cate_item_3" onmouseover="cateShow(3)" onmouseout="cateHidden(3)"><a href="###"
+                            class="cate_link" title="随机练习">随机练习</a></li>
+                        <li id="cate_item_4" onmouseover="cateShow(4)" onmouseout="cateHidden(4)"><a href="###"
+                            class="cate_link" title="通用模拟考试">通用模拟考试</a></li>
+                        <li id="cate_item_5" onmouseover="cateShow(5)" onmouseout="cateHidden(5)"><a href="###"
+                            class="cate_link" title="地方专用模拟考试">地方专用模拟考试</a></li>
+                        <li id="cate_item_6" onmouseover="cateShow(6)" onmouseout="cateHidden(6)"><a href="###"
+                            class="cate_link" title="强化练习">强化练习</a></li>
+                        <li style="border-bottom: none;"><a href="/errorlibrary.aspx" class="cate_link" title="直接点击查看我的错题集">
+                            我的错题集</a></li>
+                    </ul>
+                    <div class="cate_bottom">
+                    </div>
+                    <div id="cate_content_block_1" onmouseover="cateShow(1)" onmouseout="cateHidden(1)"
+                        class="cate_content_block_wrapper" style="top: 28px">
+                        <div class="cate_content_top">
+                        </div>
+                        <div class="cate_content_block">
+                            <ul class="cate_content_body">
+                                <li><a href="/zjlx.aspx?d=1" class="cate_link" title="小车通用(C1,C2,C3,C4)">小车(C1,C2,C3,C4)</a></li>
+                                <li><a href="/zjlx.aspx?d=2" class="cate_link" title="客车(A1,A3,B1)">客车(A1,A3,B1)</a></li>
+                                <li><a href="/zjlx.aspx?d=3" class="cate_link" title="货车(A2,B2)">货车(A2,B2)</a></li>
+                                <li><a href="/zjlx.aspx?d=4" class="cate_link" title="吊车,电瓶车(M)">吊车,电瓶车(M)</a></li>
+                            </ul>
+                        </div>
+                        <div class="cate_content_bottom">
+                        </div>
+                    </div>
+                    <div id="cate_content_block_2" onmouseover="cateShow(2)" onmouseout="cateHidden(2)"
+                        class="cate_content_block_wrapper" style="top: 58px">
+                        <div class="cate_content_top">
+                        </div>
+                        <div class="cate_content_block">
+                            <ul class="cate_content_body">
+                                <li><a href="/sxlx.aspx?d=1" class="cate_link" title="小车通用(C1,C2,C3,C4)">小车(C1,C2,C3,C4)</a></li>
+                                <li><a href="/sxlx.aspx?d=2" class="cate_link" title="客车(A1,A3,B1)">客车(A1,A3,B1)</a></li>
+                                <li><a href="/sxlx.aspx?d=3" class="cate_link" title="货车(A2,B2)">货车(A2,B2)</a></li>
+                                <li><a href="/sxlx.aspx?d=4" class="cate_link" title="吊车,电瓶车(M)">吊车,电瓶车(M)</a></li>
+                                <li><a href="/sxlx.aspx?d=6" class="cate_link" title="摩托车(D,E,F)">摩托车(D,E,F)</a></li>
+                            </ul>
+                        </div>
+                        <div class="cate_content_bottom">
+                        </div>
+                    </div>
+                    <div id="cate_content_block_3" onmouseover="cateShow(3)" onmouseout="cateHidden(3)"
+                        class="cate_content_block_wrapper" style="top: 88px">
+                        <div class="cate_content_top">
+                        </div>
+                        <div class="cate_content_block">
+                            <ul class="cate_content_body">
+                                <li><a href="/sjlx.aspx?d=1" class="cate_link" title="小车通用(C1,C2,C3,C4)">小车(C1,C2,C3,C4)</a></li>
+                                <li><a href="/sjlx.aspx?d=2" class="cate_link" title="客车(A1,A3,B1)">客车(A1,A3,B1)</a></li>
+                                <li><a href="/sjlx.aspx?d=3" class="cate_link" title="货车(A2,B2)">货车(A2,B2)</a></li>
+                                <li><a href="/sjlx.aspx?d=4" class="cate_link" title="吊车,电瓶车(M)">吊车,电瓶车(M)</a></li>
+                                <li><a href="/sjlx.aspx?d=6" class="cate_link" title="摩托车(D,E,F)">摩托车(D,E,F)</a></li>
+                            </ul>
+                        </div>
+                        <div class="cate_content_bottom">
+                        </div>
+                    </div>
+                    <div id="cate_content_block_4" onmouseover="cateShow(4)" onmouseout="cateHidden(4)"
+                        class="cate_content_block_wrapper" style="top: 118px">
+                        <div class="cate_content_top">
+                        </div>
+                        <div class="cate_content_block">
+                            <ul class="cate_content_body">
+                                <li><a href="/mnks.aspx?d=1" class="cate_link" title="小车通用(C1,C2,C3,C4)">小车(C1,C2,C3,C4)</a></li>
+                                <li><a href="/mnks.aspx?d=2" class="cate_link" title="客车(A1,A3,B1)">客车(A1,A3,B1)</a></li>
+                                <li><a href="/mnks.aspx?d=3" class="cate_link" title="货车(A2,B2)">货车(A2,B2)</a></li>
+                                <li><a href="/mnks.aspx?d=4" class="cate_link" title="吊车,电瓶车(M)">吊车,电瓶车(M)</a></li>
+                                <li><a href="/mnks.aspx?d=6" class="cate_link" title="摩托车(D,E,F)">摩托车(D,E,F)</a></li>
+                            </ul>
+                        </div>
+                        <div class="cate_content_bottom">
+                        </div>
+                    </div>
+                    <div id="cate_content_block_5" onmouseover="cateShow(5)" onmouseout="cateHidden(5)"
+                        class="cate_content_block_wrapper" style="top: 148px">
+                        <div class="cate_content_top">
+                        </div>
+                        <div class="cate_content_block">
+                            <ul class="cate_content_body">
+                                <li><a href="/mnks.aspx?p=69" class="cate_link" title="四川省模拟考试">四川省</a></li>
+                                <li><a href="/mnks.aspx?p=59" class="cate_link" title="陕西省模拟考试">陕西省</a></li>
+                                <li><a href="/mnks.aspx?p=7" class="cate_link" title="江苏省模拟考试">江苏省</a></li>
+                                <li><a href="/mnks.aspx?p=80" class="cate_link" title="重庆市模拟考试">重庆市</a></li>
+                            </ul>
+                        </div>
+                        <div class="cate_content_bottom">
+                        </div>
+                    </div>
+                    <div id="cate_content_block_6" onmouseover="cateShow(6)" onmouseout="cateHidden(6)"
+                        class="cate_content_block_wrapper" style="top: 178px">
+                        <div class="cate_content_top">
+                        </div>
+                        <div class="cate_content_block">
+                            <ul class="cate_content_body">
+                                <li><a href="/qhlx.aspx?c=100&e=1" class="cate_link">强化100A</a></li>
+                                <li><a href="/qhlx.aspx?c=100&e=2" class="cate_link">强化100B</a></li>
+                                <li><a href="/qhlx.aspx?c=200&e=1" class="cate_link">强化200A</a></li>
+                                <li><a href="/qhlx.aspx?c=200&e=2" class="cate_link">强化200B</a></li>
+                                <li><a href="/qhlx.aspx?c=300&e=1" class="cate_link">强化300A</a></li>
+                                <li><a href="/qhlx.aspx?c=300&e=2" class="cate_link">强化300B</a></li>
+                            </ul>
+                        </div>
+                        <div class="cate_content_bottom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main">
+                <asp:ContentPlaceHolder ID="MainRight" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="footer_bottom">
+            <a href="/about/aboutus.aspx">关于Jiaxiaoweb.com</a>&nbsp;&nbsp;<a href="/about/SiteMap.aspx">站点地图</a>&nbsp;&nbsp;<a
+                href="/about/ContactUs.aspx">联系我们</a>&nbsp;&nbsp;<%--<a
+                    href="http://www.miibeian.gov.cn">沪ICP备09004260号</a>--%>&nbsp;&nbsp;© 2009-2009&nbsp;&nbsp;<a
+                        href="http://www.jiaxiaoweb.com/">Jiaxiaoweb.com</a>&nbsp;&nbsp;保留所有权利
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="FooterScript" runat="server">
+    </asp:ContentPlaceHolder>
+   <!--统计-->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-11167924-1");
+        pageTracker._trackPageview();
+    } catch (err) { }</script>
+    <script type="text/javascript" src="http://js.tongji.linezing.com/693816/tongji.js"></script><noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/693816/tongji.gif"/></a></noscript>
+    <!--统计-->
+</body>
+</html>
